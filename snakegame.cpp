@@ -146,13 +146,17 @@ void logic()
     {
         gameover = true;
     }
+    // Checking collision complete!
 
+    //Checking if snake bites itself
     for(int i = 0; i < Ltail; i++)
     {
         if(tailX[i] == x && tailY[i] == y)
         gameover = true;
     }
+    //Checking bite itself completed!
 
+    //Updating score, new fruit loc, tail length.
     if (x == fruitX && y == fruitY)
     {
         score += 10;
@@ -160,6 +164,7 @@ void logic()
         fruitY = rand() % (height - 2) + 1;
         Ltail++;
     }
+    //Updation for score,...,. complete!
 }
 
 int main()
